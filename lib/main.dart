@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:thresds/firebase_options.dart';
 import 'package:thresds/screens/post_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:thresds/screens/welcome_screen.dart';
 
 void main()  async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -18,9 +19,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home:
-      // Welcome(),
-      Post(),
+      home:Welcome(),
+      //Post(),
     );
   }
 }
