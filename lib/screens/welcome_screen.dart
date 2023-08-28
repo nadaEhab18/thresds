@@ -99,7 +99,9 @@ class Welcome extends StatelessWidget {
 
   Future<UserCredential> signInWithGoogle() async {
     // Trigger the authentication flow
-    final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
+    final GoogleSignInAccount? googleUser = await GoogleSignIn(
+      scopes: ['profile''email'],
+    ).signIn();
 
     // Obtain the auth details from the request
     final GoogleSignInAuthentication? googleAuth =
